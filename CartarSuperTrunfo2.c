@@ -4,7 +4,7 @@
 void flush_stdin(void) {
     int c;
     while ((c = getchar()) != '\n' && c != EOF);
-}
+}  //Criei um flush custommizado para limpar a entrada de dados e compilar corretamente//
 
 int main() {
     char Estado_01[50], Estado_02[50];
