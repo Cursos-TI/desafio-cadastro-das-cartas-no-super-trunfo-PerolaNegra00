@@ -6,7 +6,7 @@ void flush_stdin(void) {
     while ((c = getchar()) != '\n' && c != EOF);
 }  //Criei um flush custommizado para limpar a entrada de dados e compilar corretamente//
 
-int main() {
+int main() {  //Funções e suas váriáveis declaradas//
     char Estado_01[50], Estado_02[50];
     char Nome_da_cidade_01[50], Nome_da_cidade_02[50];
     int Numero_de_pontos_turisticos_01, Numero_de_pontos_turisticos_02;
@@ -16,9 +16,9 @@ int main() {
     float Area_01, Area_02;
     char Codigo_da_carta_01[10], Codigo_da_carta_02[10];
 
-    printf("Digite o número da carta 01:\n");
+    printf("Digite o número da carta 01:\n"); //Entrada e saída de dados das cartas //
     scanf("%d", &carta_01);
-    flush_stdin();
+    flush_stdin(); //Função flush sendo utilizada para limpar entrada de dado e interpretar corretamente os dados//
 
     printf("Digite o nome do Estado 01:\n");
     fgets(Estado_01, sizeof(Estado_01), stdin);
