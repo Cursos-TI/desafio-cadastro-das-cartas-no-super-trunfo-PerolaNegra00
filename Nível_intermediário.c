@@ -107,7 +107,7 @@ int main() {
     printf("Pontos turísticos 01       : %d\n", Numero_de_pontos_turisticos_01);
     printf("PIB da cidade 01           : %.2f\n", PIB_01);
     printf("Área da cidade 01          : %.2f km²\n", Area_01);
-    printf("Densidade populacional da cidade 01 :%f hab/km²\n", divisao_02);
+    printf("Densidade populacional da cidade 01 :%f hab/km²\n", divisao_01);
     printf("PIB per Capita da cidade 01 : %.2f\n", divisao_03);
 
     printf("\n===== DADOS DA CIDADE 02 =====\n");
