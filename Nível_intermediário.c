@@ -18,9 +18,6 @@ int main() {
     char Codigo_da_carta_01[10], Codigo_da_carta_02[10];
     int divisao_01, divisao_02, divisao_03, divisa0_04;
 
-
-    printf("***JOGO DE CARTAS SUPER TRUNFO - PAÍSES***")
-
     printf("Digite o número da carta 01:\n");
     scanf("%d", &carta_01);
     flush_stdin();
