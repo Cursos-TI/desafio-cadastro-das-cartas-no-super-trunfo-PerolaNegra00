@@ -16,8 +16,6 @@ int main() {
     float PIB_01, PIB_02;
     float Area_01, Area_02;
     char Codigo_da_carta_01[10], Codigo_da_carta_02[10];
-    float Densidade_populacional_carta_01, Densidade_populacional_carta_02;
-    float PIB_per_Capita_carta_01, PIB_per_Capita_carta_02;
     int divisao_01, divisao_02, divisao_03, divisa0_04;
 
 
@@ -55,14 +53,6 @@ int main() {
     scanf("%f", &Area_01);
     flush_stdin();
 
-    printf("Informe o número de habitantes por m2 da primeira cidade:\n");
-    scanf("%f",Densidade_populacional_carta_01),
-    flush_stdin();
-
-    printf("Informe a riqueza média da cidade da primeira cidade:\n");
-    scanf("%f", PIB_per_Capita_carta_01);
-    flush_stdin();
-
     printf("Digite o número da carta 02:\n");
     scanf("%d", &carta_02);
     flush_stdin();
@@ -95,18 +85,10 @@ int main() {
     scanf("%f", &Area_02);
     flush_stdin();
 
-    printf("Informe o número de habitantes por m2 da segunda cidade:\n");
-    scanf("%f",Densidade_populacional_carta_02),
-    flush_stdin();
-
-    printf("Informe a riqueza média da cidade da segunda cidade:\n");
-    scanf("%f", PIB_per_Capita_carta_02);
-    flush_stdin();
-
-    divisao_01 = (Populacao_01 / Densidade_populacional_carta_01);
-    divisao_02 = (Populacao_02 / Densidade_populacional_carta_02);
-    divisao_03 = (PIB_01 / PIB_per_Capita_carta_01);
-    divisa0_04 = (PIB_02 / PIB_per_Capita_carta_02);
+    divisao_01 = (Populacao_01 / Area_01);
+    divisao_02 = (Populacao_02 / Area_02);
+    divisao_03 = (PIB_01 / Populacao_01);
+    divisa0_04 = (PIB_02 / Populacao_02);
 
     printf (" A densidade populacional da cidade 01 é: %f", divisao_01);
     printf (" A densidade populacional da cidade 02 é: %f", divisao_02);
@@ -126,7 +108,7 @@ int main() {
     printf("PIB da cidade 01           : %.2f\n", PIB_01);
     printf("Área da cidade 01          : %.2f km²\n", Area_01);
     printf("Densidade populacional da cidade 01 :%f hab/km²\n", divisao_02);
-    printf("PIB per Capita da cidade 01 : %.2f\n", PIB_per_Capita_carta_01);
+    printf("PIB per Capita da cidade 01 : %.2f\n", divisao_03);
 
     printf("\n===== DADOS DA CIDADE 02 =====\n");
     printf("Número da carta 02        : %d\n", carta_02);
@@ -138,7 +120,7 @@ int main() {
     printf("PIB da cidade 02           : %.2f\n", PIB_02);
     printf("Área da cidade 02          : %.2f km²\n", Area_02);
     printf("Densidade populacional da cidade 02: %f hab/km²\n", divisao_02);
-    printf("PIB per Capita da cidade 02: %.2f\n", PIB_per_Capita_carta_02);
+    printf("PIB per Capita da cidade 02: %.2f\n", divisa0_04);
 
     return 0;
 }
